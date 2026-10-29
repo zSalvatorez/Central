@@ -1,4 +1,4 @@
-# Central
+# LinkStream
 
 Programa para quem joga no PC, tudo numa janela só:
 
@@ -10,9 +10,23 @@ Programa para quem joga no PC, tudo numa janela só:
 - **Overlay de estatísticas** por cima do jogo (FPS, frametime, GPU, CPU, temperaturas, RAM, VRAM), no estilo
   do MSI Afterburner/RivaTuner.
 
-![Janela principal da Central](imagens/janela-principal.png)
+![Janela principal do LinkStream](imagens/janela-principal.png)
 
 > Versão de teste. Se achar qualquer problema, avisa (veja "Como relatar um problema" lá embaixo).
+
+### Novidades desta versão
+
+- **Nome novo:** a Central agora se chama **LinkStream**. Quem já tem a Central é só rodar o instalador novo: ele traz
+  os ajustes, as cenas e as chaves para o LinkStream e tira a Central antiga sozinho (os vídeos salvos ficam onde estavam).
+
+- **Live que não entrava no ar** ("Preparando a transmissão" para sempre): o LinkStream confere sozinho e, se a live não
+  entrar em ~1 minuto, **reabre** automaticamente (até 2 vezes). Também manda a **versão vertical** para os Shorts quando
+  a "Transmissão dupla" do YouTube pede (veja "Live no YouTube").
+- **Gravação**: começa exatamente quando você aperta (antes podia perder alguns segundos do começo) e **salva bem mais
+  rápido**. A qualidade padrão agora é 60 Mb/s: igual a olho nu e ~30% menor (~27 GB por hora em 4K).
+- **Jogando na TV com o monitor desligado**: a gravação, o replay e a live não saem mais com a imagem preta.
+- Clicar no ícone do LinkStream (barra de tarefas, menu Iniciar) com ele escondido **abre a janela**.
+- Depois da janelinha da live aberta pelo controle, o **jogo volta a ficar em foco** sozinho.
 
 ## Requisitos
 
@@ -23,10 +37,10 @@ Programa para quem joga no PC, tudo numa janela só:
 
 ## Como instalar
 
-1. Baixe o **CentralSetup.exe** (em **Releases**, aqui ao lado). Tem uns 180 MB.
+1. Baixe o **LinkStreamSetup.exe** (em **Releases**, aqui ao lado). Tem uns 180 MB.
 2. Abra. Como o programa não tem assinatura digital, o Windows mostra **"O Windows protegeu o computador"**:
    clique em **Mais informações → Executar assim mesmo**.
-3. Clique em **Instalar**. Ele instala em `AppData\Local\Programs\Central`, cria atalho no menu Iniciar
+3. Clique em **Instalar**. Ele instala em `AppData\Local\Programs\LinkStream`, cria atalho no menu Iniciar
    (e na área de trabalho, se quiser) e aparece em "Aplicativos instalados" para desinstalar.
 4. No fim, o Windows pede **uma permissão** (tela com fundo escuro). É para o overlay de estatísticas:
    - instala o driver **PawnIO** (gratuito, código aberto, assinado), que lê a temperatura do processador;
@@ -42,13 +56,14 @@ ajustes e cenas ficam).
 
 ## Primeiros passos
 
-- A Central abre junto com o Windows, escondida perto do relógio. Clique duas vezes no ícone para abrir.
-- Ela **detecta o jogo sozinha**. Em **Vídeo** (à direita) dá para escolher um jogo, uma janela ou a área de trabalho.
+- O LinkStream abre junto com o Windows, escondido perto do relógio. Clique duas vezes no ícone para abrir (ou clique
+  no ícone dele na barra de tarefas / menu Iniciar). Para não abrir com o Windows: ⚙ Ajustes → "Iniciar com o Windows".
+- Ele **detecta o jogo sozinho**. Em **Vídeo** (à direita) dá para escolher um jogo, uma janela ou a área de trabalho.
 - **Atalhos** (funcionam dentro do jogo): `Ctrl+Alt+R` gravar · `Ctrl+Alt+S` salvar replay · `Ctrl+Alt+Y` YouTube ·
   `Ctrl+Alt+L` link · `Ctrl+Alt+O` overlay. Dá para trocar em ⚙ Ajustes (e o do overlay na aba Estatísticas).
 - **Controle** (Xbox ou PlayStation): segure **Select/View/Share** e aperte **Y** gravar · **B** replay · **X** print ·
   **A** live · **LB/L1** overlay.
-- Os vídeos ficam em `Vídeos\Central` (botão **Abrir vídeos**).
+- Os vídeos ficam em `Vídeos\LinkStream` (botão **Abrir vídeos**).
 - O manual completo vem junto: `COMO-USAR.md`, na pasta do programa.
 
 ## Live no YouTube
@@ -58,6 +73,15 @@ Depois é só clicar em **YouTube**: abre esta janelinha, onde dá para ajustar 
 canal (para o **chat aparecer por cima do jogo** e na live) e escolher a **cena**.
 
 ![Janelinha antes de abrir a live](imagens/janela-da-live.png)
+
+**A live entrou no ar?** Depois de ~1 minuto o LinkStream confere no seu canal. Se o YouTube estiver recebendo o vídeo
+mas a live não estiver no ar, ele reabre sozinho (até 2 vezes) e avisa por cima do jogo. Funciona com live **pública**
+(ou não listada com o link colado na janelinha).
+
+**Transmissão dupla / live vertical (Shorts):** o YouTube às vezes liga sozinho a "Transmissão dupla" e aí espera também
+um vídeo vertical. Para o LinkStream mandar a vertical: no YouTube Studio → Transmitir ao vivo, deixe a parte vertical em
+**"Codificador"**, copie a **"Chave: Vertical"** e cole em ⚙ Ajustes → **"Chave vertical (Shorts)"**. O LinkStream manda o
+meio da tela em 1080x1920 só quando o YouTube pedir (ou sempre, se preferir).
 
 ## Cenas: face cam, QR de doação, overlays (novo)
 
@@ -92,8 +116,8 @@ vídeo/live. Liga e desliga com `Ctrl+Alt+O` ou **Select + LB** no controle. Nã
 ## Link para os amigos
 
 Clique em **Ligar link** e mande o endereço: abre no navegador do PC ou do celular, sem instalar nada, quase sem atraso.
-Na primeira vez, o Windows pergunta se a Central pode receber conexões: clique em **Permitir**. O endereço muda a cada
-vez que a Central abre, e só funciona enquanto o link está ligado.
+Na primeira vez, o Windows pergunta se o LinkStream pode receber conexões: clique em **Permitir**. O endereço muda a cada
+vez que o LinkStream abre, e só funciona enquanto o link está ligado.
 
 ## O que testar (ajuda muito!)
 
@@ -108,7 +132,7 @@ vez que a Central abre, e só funciona enquanto o link está ligado.
 
 Conte **o que fez, o que esperava e o que aconteceu**, e mande junto:
 
-- o arquivo de registro: `%LOCALAPPDATA%\Programs\Central\dados\central.log`
+- o arquivo de registro: `%LOCALAPPDATA%\Programs\LinkStream\dados\linkstream.log`
   (cole esse caminho na barra do Explorador de Arquivos);
 - sua placa de vídeo, processador e versão do Windows;
 - um print, se for algo na tela.
@@ -117,7 +141,7 @@ Conte **o que fez, o que esperava e o que aconteceu**, e mande junto:
 
 ## Desinstalar
 
-Configurações → Aplicativos → Aplicativos instalados → **Central** → Desinstalar. Os vídeos salvos ficam.
+Configurações → Aplicativos → Aplicativos instalados → **LinkStream** → Desinstalar. Os vídeos salvos ficam.
 O driver PawnIO fica (outros programas também usam); para tirar, desinstale **PawnIO** na mesma lista.
 
 ## Programas que vão junto
